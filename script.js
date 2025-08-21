@@ -1,24 +1,29 @@
-var cursor = document.querySelector("#custom-cursor");
-var blur = document.querySelector(".cursor-blur");
+const cursor = document.querySelector("#custom-cursor");
+const cursorBlur = document.querySelector("#cursor-blur");
 
-var crsr = document.querySelector("#cursor");
-var blur = document.querySelector("#cursor-blur");
+// const crsr = document.querySelector("#cursor");
+// const blur = document.querySelector("#cursor-blur");
 
+// Fix: Avoid duplicate variable declaration for 'blur'
 document.addEventListener("mousemove", function (dets) {
-  crsr.style.left = dets.x + "px";
-  crsr.style.top = dets.y + "px";
-  blur.style.left = dets.x - 250 + "px";
-  blur.style.top = dets.y - 250 + "px";
+  if (crsr && cursorBlur) {
+    crsr.style.left = dets.x + "px";
+    crsr.style.top = dets.y + "px";
+    cursorBlur.style.left = dets.x - 250 + "px";
+    cursorBlur.style.top = dets.y - 250 + "px";
+  }
 });
 
 
 window.addEventListener("mousemove", (e) => {
-  gsap.to(cursor, {
-    x: e.clientX,
-    y: e.clientY,
-    duration: 0.2,
-    ease: "power2.out"
-  });
+  if(cursor){
+    gsap.to(cursor, {
+      x: e.clientX,
+      y: e.clientY,
+      duration: 0.2,
+      ease: "power2.out"
+    });
+  }
 });
 
 // Animate on hover
@@ -97,30 +102,8 @@ gsap.from(".card", {
     scrub: 1,
   },
 });
-gsap.from("#colon1", {
-  y: -70,
-  x: -70,
-  scrollTrigger: {
-    trigger: "#colon1",
-    scroller: "body",
-    // markers:true,
-    start: "top 55%",
-    end: "top 45%",
-    scrub: 4,
-  },
-});
-gsap.from("#colon2", {
-  y: 70,
-  x: 70,
-  scrollTrigger: {
-    trigger: "#colon1",
-    scroller: "body",
-    // markers:true,
-    start: "top 55%",
-    end: "top 45%",
-    scrub: 4,
-  },
-});
+
+
 gsap.from("#page4 h1", {
   y: 50,
   scrollTrigger: {

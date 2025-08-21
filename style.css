@@ -182,7 +182,7 @@ video{
     }
 }
 
-.about-us{
+#about-us{
     height: 40vh;
     width: 100%;
     /* background-color: red; */
@@ -192,26 +192,26 @@ video{
     justify-content: space-around;
 }
 
-.about-us img{
+#about-us img{
     height: 180px;
     width: 180px;
     border-radius: 20px;
     object-fit: cover;
 }
 
-.about-us-in{
+#about-us-in{
     width: 50%;
     text-align: center;
 }
 
-.about-us-in h3{
+#about-us-in h3{
     font-size: 54px;
     font-weight: 800;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.about-us-in p {
+#about-us-in p {
     font-size: 20px;
     line-height: 26px;
 }
@@ -365,6 +365,7 @@ video{
     position: absolute;
     top: -15%;
     font-weight: 900;
+    align-items: center;
     font-family: gilroy;
     color: #e0d5d5;
     -webkit-text-stroke: 2px #91b4d6;
@@ -435,4 +436,201 @@ video{
 .f3 h3:hover {
   color: #119f3a; /* light green */
   transform: scale(1.03); /* slight zoom effect */
+}
+
+/* 📌 Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  #nav {
+    padding: 0 40px;
+    gap: 20px;
+  }
+
+  #nav h4 {
+    font-size: 14px;
+  }
+
+  #page1 h1 {
+    font-size: 80px;
+  }
+
+  #page1 h2 {
+    font-size: 22px;
+  }
+
+  #page1 p {
+    width: 70%;
+    font-size: 18px;
+  }
+
+  #about-us {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  #about-us img {
+    height: 200px;
+    width: 200px;
+  }
+
+  #about-us-in {
+    width: 80%;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
+    gap: 30px;
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .card {
+    width: 40%;
+    height: 250px;
+  }
+
+  .green-div h4 {
+    width: 80%;
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .page3 > p {
+    width: 80%;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .page4 {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 30px;
+    padding: 40px 0;
+  }
+
+  .elem {
+    width: 40%;
+    height: 220px;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+  }
+}
+
+/* 📌 Mobile (0 - 767px) */
+@media (max-width: 767px) {
+  #nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 15px;
+    height: auto;
+  }
+
+  #nav img {
+    height: 50px;
+  }
+
+  #nav h4 {
+    font-size: 12px;
+  }
+
+  #page1 h1 {
+    font-size: 40px;
+  }
+
+  #page1 h2 {
+    font-size: 18px;
+  }
+
+  #page1 p {
+    width: 90%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  #about-us {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #about-us img {
+    width: 120px;
+    height: 120px;
+  }
+
+  #about-us-in {
+    width: 95%;
+  }
+
+  #about-us-in h3 {
+    font-size: 28px;
+  }
+
+  #about-us-in p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .card {
+    width: 85%;
+    height: 200px;
+  }
+
+  .green-div h4 {
+    width: 90%;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .page3 > p {
+    width: 90%;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .page4 {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  .elem {
+    width: 85%;
+    height: 200px;
+  }
+
+  .page4 h1 {
+    font-size: 28px;
+    text-align: center;
+    top: -10%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .f2 h3, .f3 h3 {
+    font-size: 14px;
+  }
+
+  .f4 h4 {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
